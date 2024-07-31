@@ -13,12 +13,14 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css"><link rel="stylesheet" href="Footer.css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link href="css/Machadalo.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body id="page-top">
@@ -168,8 +170,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">July 12, 2024</div>
+                                        <span class="font-weight-bold">Society's report is ready to download!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -179,8 +181,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">July 12, 2024</div>
+                                        Your Society is ahead to this society
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -190,7 +192,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        <div class="small text-gray-500">July 12, 2024</div>
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a>
@@ -219,7 +221,7 @@
                                     <div class="font-weight-bold">
                                         <div class="text-truncate">Hi there! I am wondering if you can help me with a
                                             problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                        <div class="small text-gray-500">Aayush · 58m</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -228,9 +230,9 @@
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                        <div class="text-truncate">I have the society report that you filled last month, how
                                             would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                        <div class="small text-gray-500">Megha · 1d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -241,10 +243,10 @@
                                     <div>
                                         <div class="text-truncate">Last month's report looks great, I am very happy with
                                             the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                        <div class="small text-gray-500">Rakhi · 2d</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                <!-- <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
                                             alt="...">
@@ -254,7 +256,7 @@
                                         <div class="text-truncate">Am I a good boy? The reason I ask is because someone
                                             told me that people say this to all dogs, even if they aren't good...</div>
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
+                                    </div> -->
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                             </div>
@@ -266,8 +268,10 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Aayush Singh</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-dark small">User</span>
+                                <!-- <img class="img-profile rounded-circle" src="img/undraw_profile.svg"> -->
+                                <img class="img-profile rounded-circle" src="img/undraw_profile_1.svg">
+                                
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in "
@@ -299,28 +303,55 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="row d-flex">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-md-9 justify-content-between">
+                            <div class="search-dropdown mb-2">
+                                <div id="citySelector" class="p-2 rounded border border-light shadow-sm"></div>
+                            </div>
+                            <div class="search-dropdown mb-2" style="width: 180px;">
+                                <div id="societySelector" class="p-2 rounded border border-light shadow-sm"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+        <div class="d-flex flex-column flex-md-column align-items-center align-items-md-end">
+            <div class="d-flex flex-row w-100 mb-2">
+                <button class="btn btn-outline-primary flex-fill shadow-sm" onclick="openCampareModal()">Compare Society</button>
+                <a href="#" id="downloadButton" class="btn btn-outline-primary shadow-sm ml-2 flex-fill">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+                    </div>
+                    
+                    <!-- <div class="row d-flex">
                         <div class="col-9">
                             <div class="d-sm-flex flex-column flex-sm-row">
                                 <h1 class="h3 mb-0 text-primary">Dashboard</h1>
-                                <div class="col-12 text-center d-flex d-inline pt-4">
-                                    <div class="mt-sm-0 ml-0 ml-sm-3  search-dropdown">
+                                <div class="col-12 text-center d-flex d-inline pt-4"> -->
+                                    <!-- <div class="mt-sm-0 ml-0 ml-sm-3  search-dropdown">
                                         <div id="citySelector"></div>
                                         <label for="citySelector" class="text-center text-primary">Select City</label>
                                     </div>
                                     <div class="mt-sm-0 ml-0 ml-sm-3 mr-2 search-dropdown">
                                         <div id="societySelector"></div>
                                         <label for="citySelector" class="text-right text-primary">Select Society</label>
-                                    </div>
+                                    </div> -->
+<!--                                     
+                                    
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3 text-right">
+                        </div> -->
+                        <!-- <div class="col-3 d-flex text-right">
+                            <div class="mt-sm-0 ml-0 ml-sm-3 mr-2" >
+                                <button class="btn-primary" onclick="openCampareModal()">Compare Society</button>
+                            </div>
+                            <div>
                             <a href="#" id="downloadButton"
                                 class="mt-3 mt-sm-0 btn btn-sm btn-outline-primary shadow-sm">
                                 <i class="fas fa-download fa-sm text-primary-50"></i>
-                            </a>
-                        </div>
+                            </a></div>
+                        </div> -->
                     </div>
                     <div class="row">
                     </div>
@@ -354,14 +385,18 @@
                                 <div class="container">
                                     <div id="benchmarking-report">
                                         <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <h6 class="text-primary text-center hover-target  hover-tooltip">
-                                                    Connectivity
-                                                    <button class="btn btn-outline-primary btn-sm"
+                                            <div class="col-lg-6 col-md-6 col-sm-12 hr__line pt-4">
+                                                <div class="d-flex justify-content-center">
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
                                                         onclick="openCardById('connectivityCard')">
-                                                        Rate
+                                                        Connectivity
                                                     </button>
-                                                    <!-- <button class="btn btn-outline-primary btn-sm" onclick="openBoxInCard()">Add</button>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showPositive('connectivityCard')">+</button>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showNegative('connectivityCard')">-</button>
+                                                </div>
+                                                <!-- <button class="btn btn-outline-primary btn-sm" onclick="openBoxInCard()">Add</button>
                                                     <div id="pointsForm">
                                                         <h5>Favorable Points</h5>
                                                         <textarea id="favorablePoints" rows="4" cols="25"
@@ -373,17 +408,16 @@
                                                         <button onclick="savePoints()"
                                                             class="btn btn-outline-primary">Save Points</button>
                                                     </div> -->
-                                                </h6>
+                                                <!-- </h6> -->
                                                 <div class="rating-card" id="connectivityCard">
-                                                    <div class="rank-buttons text-right">
+                                                    <!-- <div class="rank-buttons text-right">
                                                         <button class="btn btn-outline-primary btn-sm"
                                                             onclick="showPositive('connectivityCard')">+</button>
                                                         <button class="btn btn-outline-primary btn-sm"
                                                             onclick="showNegative('connectivityCard')">-</button>
                                                     </div>
                                                     <div class="rank-list" id="rankList">
-                                                        <!-- Content will be dynamically added here -->
-                                                    </div>
+                                                    </div> -->
                                                     <ul>
                                                         <li>Public transport: Bus Stand, Railway Station, Sharing
                                                             Rickshaw</li>
@@ -398,29 +432,39 @@
                                                         <li>No water logging on roads</li>
                                                     </ul>
                                                 </div>
-
-                                                <div class="chart-bar">
-                                                    <canvas id="connectivityChart"></canvas>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="chart-bar" style="width: auto;">
+                                                        <canvas id="connectivityChart"></canvas>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="rank-list mb-3" id="rankList-connectivityCard">
+                                                        </div>
+                                                        <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse" data-target="#rankList-peopleFriendlinessCard" aria-expanded="false" aria-controls="rankList-peopleFriendlinessCard">
+                                                            Rating
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <h6 class="text-primary text-center hover-target hover-tooltip">
-                                                    Maintenance
-                                                    <button class="btn btn-outline-primary btn-sm"
+                                            <div class="col-lg-6 col-md-6 col-sm-12 hr__line pt-4">
+                                                <div class="d-flex justify-content-center">
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
                                                         onclick="openCardById('maintenanceCard')">
-                                                        Rate
+                                                        Maintenance
                                                     </button>
-                                                </h6>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showPositive('maintenanceCard')">+</button>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showNegative('maintenanceCard')">-</button>
+                                                </div>
                                                 <div class="rating-card" id="maintenanceCard">
-                                                    <div class="rank-buttons text-right">
+                                                    <!-- <div class="rank-buttons text-right">
                                                         <button class="btn btn-outline-primary btn-sm"
                                                             onclick="showPositive('maintenanceCard')">+</button>
                                                         <button class="btn btn-outline-primary btn-sm"
                                                             onclick="showNegative('maintenanceCard')">-</button>
                                                     </div>
                                                     <div class="rank-list" id="rankList">
-                                                        <!-- Content will be dynamically added here -->
-                                                    </div>
+                                                    </div> -->
                                                     <ul>
                                                         <li>Water supply</li>
                                                         <li>Power backup available ( Generators / Inverters )</li>
@@ -434,34 +478,38 @@
                                                         <li>Basement parking has light issues, drainage issue </li>
                                                         <li>Pesticides sprinkle timely?</li>
                                                     </ul>
-                                                   
+
                                                 </div>
-                                                <div class="chart-bar">
-                                                    <canvas id="maintenanceChart"></canvas>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="chart-bar" style="width: auto;">
+                                                        <canvas id="maintenanceChart" ></canvas>
+                                                    </div>
+                                                        <div class="d-flex flex-column">
+                                                            <div class="rank-list mb-3" id="rankList-maintenanceCard">
+                                                            </div>
+                                                            <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse" data-target="#rankList-peopleFriendlinessCard" aria-expanded="false" aria-controls="rankList-peopleFriendlinessCard">
+                                                                Rating
+                                                            </button>
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
-                                        <hr>
                                         <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <h6 class="text-primary text-center hover-tooltip">
-                                                    Construction
-                                                    <button class="btn btn-outline-primary btn-sm"
+                                            <div class="col-lg-6 col-md-6 col-sm-12 hr__line pt-4">
+                                                <div class="d-flex justify-content-center">
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
                                                         onclick="openCardById('constructionCard')">
-                                                        Rate
+                                                        Construction
                                                     </button>
-                                                </h6>
-                                                <div class="rating-card" id="constructionCard">
                                                     <div class="rank-buttons text-right">
-                                                        <button class="btn btn-outline-primary btn-sm"
+                                                        <button class="btn btn-outline-primary btn-sm mx-2"
                                                             onclick="showPositive('constructionCard')">+</button>
-                                                        <button class="btn btn-outline-primary btn-sm"
+                                                        <button class="btn btn-outline-primary btn-sm mx-2"
                                                             onclick="showNegative('constructionCard')">-</button>
                                                     </div>
-                                                    <div class="rank-list" id="rankList">
-                                                        <!-- Content will be dynamically added here -->
-                                                    </div>
+
+                                                </div>
+                                                <div class="rating-card" id="constructionCard">
                                                     <ul>
                                                         <li>Weak walls and pillars.</li>
                                                         <li>Poor quality plaster and fitting</li>
@@ -474,30 +522,34 @@
                                                         <li>Safety feaures at Entrance and Exit gate</li>
                                                         <li>Clear Emergency exits, Fire safety features</li>
                                                     </ul>
-                                                   
+
                                                 </div>
-                                                <div class="chart-bar">
-                                                    <canvas id="constructionChart"></canvas>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="chart-bar" style="width: auto;">
+                                                        <canvas id="constructionChart"></canvas>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="rank-list mb-3" id="rankList-constructionCard">
+                                                        </div>
+                                                        <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse" data-target="#rankList-peopleFriendlinessCard" aria-expanded="false" aria-controls="rankList-peopleFriendlinessCard">
+                                                            Rating
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <h6 class="text-primary text-center hover-tooltip">
-                                                    Amenities
-                                                    <button class="btn btn-outline-primary btn-sm"
+                                            <div class="col-lg-6 col-md-6 col-sm-12 hr__line pt-4">
+                                                <div class="d-flex justify-content-center">
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
                                                         onclick="openCardById('amenitiesCard')">
-                                                        Rate
+                                                        Amenities
                                                     </button>
-                                                </h6>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showPositive('amenitiesCard')">+</button>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showNegative('amenitiesCard')">-</button>
+
+                                                </div>
                                                 <div class="rating-card" id="amenitiesCard">
-                                                    <div class="rank-buttons text-right">
-                                                        <button class="btn btn-outline-primary btn-sm"
-                                                            onclick="showPositive('amenitiesCard')">+</button>
-                                                        <button class="btn btn-outline-primary btn-sm"
-                                                            onclick="showNegative('amenitiesCard')">-</button>
-                                                    </div>
-                                                    <div class="rank-list" id="rankList">
-                                                        <!-- Content will be dynamically added here -->
-                                                    </div>
                                                     <ul>
                                                         <li>Lot of open space</li>
                                                         <li>Nice park and kids playarea</li>
@@ -508,34 +560,35 @@
                                                         <li>Well lit & safe at night</li>
                                                         <li>Swimming pools</li>
                                                     </ul>
-                                                    
+
                                                 </div>
-                                                <div class="chart-bar">
-                                                    <canvas id="amenitiesChart"></canvas>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="chart-bar" style="width: auto;">
+                                                        <canvas id="amenitiesChart"></canvas>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="rank-list mb-3" id="rankList-amenitiesCard">
+                                                        </div>
+                                                        <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse" data-target="#rankList-peopleFriendlinessCard" aria-expanded="false" aria-controls="rankList-peopleFriendlinessCard">
+                                                            Rating
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
-                                        <hr>
                                         <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <h6 class="text-primary text-center hover-tooltip">
-                                                    People Friendliness
-                                                    <button class="btn btn-outline-primary btn-sm"
+                                            <div class="col-lg-6 col-md-6 col-sm-12 hr__line pt-4">
+                                                <div class="d-flex justify-content-center">
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
                                                         onclick="openCardById('peopleFriendlinessCard')">
-                                                        Rate
+                                                        People Friendliness
                                                     </button>
-                                                </h6>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showPositive('peopleFriendlinessCard')">+</button>
+                                                    <button class="btn btn-outline-primary btn-sm mx-2"
+                                                        onclick="showNegative('peopleFriendlinessCard')">-</button>
+                                                </div>
                                                 <div class="rating-card" id="peopleFriendlinessCard">
-                                                    <div class="rank-buttons text-right">
-                                                        <button class="btn btn-outline-primary btn-sm"
-                                                            onclick="showPositive('peopleFriendlinessCard')">+</button>
-                                                        <button class="btn btn-outline-primary btn-sm"
-                                                            onclick="showNegative('peopleFriendlinessCard')">-</button>
-                                                    </div>
-                                                    <div class="rank-list" id="rankList">
-                                                        <!-- Content will be dynamically added here -->
-                                                    </div>
                                                     <ul>
                                                         <li>Good celebration of festivals</li>
                                                         <li>Frequent cultural events</li>
@@ -545,11 +598,18 @@
                                                         <li>Residents pay maintenence on time</li>
                                                         <li>Friendly environment</li>
                                                     </ul>
-                                                    
                                                 </div>
-                                                <div class="chart-bar">
-                                                    <canvas id="peopleFriendlinessChart"></canvas>
-                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="chart-bar" style="width: auto;">
+                                                        <canvas id="peopleFriendlinessChart"></canvas>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="rank-list mb-3" id="rankList-peopleFriendlinessCard">
+                                                        </div>
+                                                        <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="collapse" data-target="#rankList-peopleFriendlinessCard" aria-expanded="false" aria-controls="rankList-peopleFriendlinessCard">
+                                                            Rating
+                                                        </button>
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>
@@ -592,14 +652,14 @@
                                 </div>
                                 <!-- </div> -->
 
-                                <div class="row">
+                                <div class="row" style="display: none;">
                                     <div class="container mt-2">
                                         <div class="table-reader">
                                             <table class="table table-striped">
                                                 <thead class="thead-fixed bg-primary">
                                                     <tr>
-                                                        <th scope="col">Favourable(+)</th>
-                                                        <th scope="col">Unfavourable(-)</th>
+                                                        <th scope="col">Positive(+)</th>
+                                                        <th scope="col">Negative(-)</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="dynamic-table-body">
@@ -611,12 +671,40 @@
 
                             </div>
 
-                            <footer class="sticky-footer bg-white">
-                                <div class="container my-auto">
-                                    <div class="copyright text-center my-auto">
-                                        <span>Copyright &copy; Your Website 2024</span>
+                            <footer>
+                                <section>    
+                                    <div id="containerFooter">
+                                        <div id="webFooter">
+                                            <h5>Contact</h5>
+                                            <p>Vaibhav Ahlawat</p>
+                                            <p>sales@machadalo.com</p>
+                                            <p>9910027018</p>
+                                        </div>
+                                        <div id="webFooter">
+                                            <h5>partners </h5>
+                                            <p>Burger</p>
+                                            <p>Shindler</p>
+                                            <p>Asianpaints</p>
+                                            <p>Dulux</p>
+                                        </div>
+                                        <div id="webFooter">
+                                            <h5>Services</h5>
+                                            <p>Painting</p>
+                                            <p>EV</p>
+                                            <p>Elevator</p>
+                                            <p>Solar</p>
+                                        </div>
+                                        <div id="webFooter">
+                                            <h5>Follow_Us</h5>
+                                            <p><i class="fab fa-facebook"></i> Facebook</p>
+                                            <p><i class="fab fa-instagram"></i> Instagram</p>
+                                            <p><i class="fab fa-linkedin"></i> LinkedIn</p>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div id="credit"><p>Vijaikirti Technologies Pvt Ltd, 91 Springboard, 1st Floor, Plot No. D,107, Vyapar Marg, D block, Sector-2, Noida, Uttar Pradesh 201301</p></div>
+                                    <div id="credit"> © VijayKirti Technology </a> &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="https://www.Machadalo.com/" target="_blank"> Machadalo </a></div>
+                                    
+                                </section>
                             </footer>
                             <!-- End of Footer -->
 
@@ -651,6 +739,32 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="compareModalLabel">Compare Society</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Modal content goes here -->
+                                    <div class="mt-sm-0 ml-0 ml-sm-3 mr-2 search-dropdown">
+                                        <div id="compareSocietySelector"></div>
+                                        <label class="text-right text-primary">Select Society</label>
+                                    </div>
+                                    <div id="selectedSocietyForCompare">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="onSubmitCompareSociety()">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <script src="vendor/jquery/jquery.min.js"></script>
                     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -670,6 +784,7 @@
                     <script src="js/dropdown.js"></script>
                     <script src="js/demo/AllScript.js"></script>
                     <script src="Points.js"></script>
+                    <script src="./js/compareModal.js"></script>
 
                     <script>
                         document.getElementById('downloadButton').addEventListener('click', function () {

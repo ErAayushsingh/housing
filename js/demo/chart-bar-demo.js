@@ -163,3 +163,38 @@ const renderCharts = (meanRatings) => {
         }
     });
 };
+
+const compareSocietyCharts = (compareData) => {
+    const categories = ["Connectivity", "Maintenance", "Construction", "Amenities", "PeopleFriendliness"];
+    const chartIds = ['connectivityChart', 'maintenanceChart', 'constructionChart', 'amenitiesChart', 'peopleFriendlinessChart'];
+    const chartCtxs = chartIds.map(id => document.getElementById(id).getContext('2d'));
+    const societies = Object.keys(compareData);
+
+    categories.forEach((category, index) => {
+        const data = societies.map(society => compareData[society][category]);
+
+        if (charts[index]) {
+            // Update existing chart data
+            charts[index].data.datasets[0].data = data;
+            charts[index].data.labels = societies;
+            charts[index].update();
+        } else {
+            // Create new chart instance
+            const chart = new Chart(chartCtxs[index], {
+                type: 'bar',
+                data: {
+                    labels: societies,
+                    datasets: [{
+                        label: `${category} Ratings`,
+                        data: data,
+                        backgroundColor: societies.map(() => "#4e73df"),
+                        borderColor: societies.map(() => "#36b9cc"),
+                        borderWidth: 1
+                    }]
+                },
+                options: commonOptions
+            });
+            charts[index] = chart;
+        }
+    });
+}
