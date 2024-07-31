@@ -13,6 +13,11 @@ const openCampareModal = () => {
 
     $('#compareModal').modal('show');
 }
+
+const hideRankList = (id) => {
+    let cardData = document.getElementById(`rankList-${id}`)
+    cardData.innerHTML = '';
+}
 const calculateRatingBySociety = (society) => {
     let societyConnectivity = 0;
     let societyMaintenanceRating = 0;
@@ -50,7 +55,7 @@ const calculateRatingBySociety = (society) => {
 
 
 const handleSelectCompareSociety = (selectedItem, index) => {
-    if (Object.keys(compareSocietyValues).length < 2 &&  !compareSocietyValues[selectedItem] ) {
+    if (Object.keys(compareSocietyValues).length < 3 && !compareSocietyValues[selectedItem]) {
         let ratings = calculateRatingBySociety(selectedItem);
         compareSocietyValues[selectedItem] = ratings;
         addSocietyToDOM(selectedItem);
@@ -63,7 +68,10 @@ const onSubmitCompareSociety = () => {
         currentSocietyValues[key] = meanRatings[key].society.toFixed(1) || '';
     }
     compareSocietyValues[selectedSociety] = currentSocietyValues;
-    compareSocietyCharts(compareSocietyValues)
+    compareSocietyCharts(compareSocietyValues);
+    cardIdsOfCharts?.forEach(id=>{
+        hideRankList(id)
+    })
 }
 const addSocietyToDOM = (societyName) => {
     const container = document.getElementById('selectedSocietyForCompare');
